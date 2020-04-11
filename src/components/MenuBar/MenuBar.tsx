@@ -89,6 +89,7 @@ export default function MenuBar() {
   return (
     <AppBar className={classes.container} position="static">
       <Toolbar>
+        <h1>THRILLWORKS</h1>
         {roomState === 'disconnected' ? (
           <form className={classes.form} onSubmit={handleSubmit}>
             {window.location.search.includes('customIdentity=true') || !user?.displayName ? (
