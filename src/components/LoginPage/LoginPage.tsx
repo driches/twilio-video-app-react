@@ -24,6 +24,9 @@ const useStyles = makeStyles({
     width: '55%',
     display: 'block',
   },
+  thrillworksLogo: {
+    color: '#000000',
+  },
   videoLogo: {
     width: '25%',
     padding: '2.4em 0 2.1em',
@@ -96,7 +99,7 @@ export default function LoginPage() {
     <ThemeProvider theme={theme}>
       <Grid container justify="center" alignItems="flex-start" className={classes.container}>
         <Paper className={classes.paper} elevation={6}>
-          <TwilioLogo className={classes.twilioLogo} />
+          <h2 className={classes.thrillworksLogo}>THRILLWORKS</h2>
           <img className={classes.videoLogo} src={videoLogo} alt="Video Logo"></img>
 
           {process.env.REACT_APP_SET_AUTH === 'firebase' && (
