@@ -15,7 +15,16 @@ import theme from './theme';
 import './types';
 import { VideoProvider } from './components/VideoProvider';
 
-// See: https://media.twiliocdn.com/sdk/js/video/releases/2.0.0/docs/global.html#ConnectOptions
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
+
+// eslint-disable-next-line no-restricted-globals
+const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+if (path) {
+  history.replace(path);
+}
+
 // for available connection options.
 const connectionOptions: ConnectOptions = {
   bandwidthProfile: {

@@ -18,17 +18,24 @@ import { useLocation, useHistory } from 'react-router-dom';
 const useStyles = makeStyles({
   container: {
     height: '100vh',
-    background: '#0D122B',
+    background: '#000000',
   },
   twilioLogo: {
-    width: '55%',
+    width: '70%',
     display: 'block',
   },
   thrillworksLogo: {
-    color: '#000000',
+    fontSize: '2.5em',
+    color: '#ffffff',
+  },
+  instruction: {
+    color: '#ffffff',
+    padding: 0,
+    fontWeight: 'normal',
+    fontSize: '1em',
   },
   videoLogo: {
-    width: '25%',
+    width: '10%',
     padding: '2.4em 0 2.1em',
   },
   paper: {
@@ -39,6 +46,7 @@ const useStyles = makeStyles({
     marginTop: '4em',
     background: 'white',
     color: 'black',
+    backgroundColor: '#000000',
   },
   button: {
     color: 'black',
@@ -99,9 +107,8 @@ export default function LoginPage() {
     <ThemeProvider theme={theme}>
       <Grid container justify="center" alignItems="flex-start" className={classes.container}>
         <Paper className={classes.paper} elevation={6}>
-          <h2 className={classes.thrillworksLogo}>THRILLWORKS</h2>
-          <img className={classes.videoLogo} src={videoLogo} alt="Video Logo"></img>
-
+          <h1 className={classes.thrillworksLogo}>THRILLWORKS</h1>
+          <h2 className={classes.instruction}>Sign in with your Google account to connect with us</h2>
           {process.env.REACT_APP_SET_AUTH === 'firebase' && (
             <Button variant="contained" className={classes.button} onClick={login} startIcon={<GoogleLogo />}>
               Sign in with Google

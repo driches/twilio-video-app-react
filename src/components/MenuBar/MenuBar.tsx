@@ -50,6 +50,9 @@ const useStyles = makeStyles((theme: Theme) =>
     joinButton: {
       margin: '1em',
     },
+    roomTitle: {
+      marginLeft: '2em',
+    },
   })
 );
 
@@ -126,7 +129,7 @@ export default function MenuBar() {
             {(isConnecting || isFetching) && <CircularProgress className={classes.loadingSpinner} />}
           </form>
         ) : (
-          <h3>{roomName}</h3>
+          <h3 className={classes.roomTitle}>{roomName}</h3>
         )}
         <div className={classes.rightButtonContainer}>
           <LocalAudioLevelIndicator />
